@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union Street Center: Environmental Assessment - Abdul Gaffar Haadi</title>
+    <meta property="og:title" content="Union Street Center: Environmental Assessment"/>
+    <meta property="og:url" content="website.html"/>
+    <meta property="og:site_name" content="Abdul Gaffar Haadi: Environmental Assessment"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Union Street Center: Environmental Assessment"/>
+    
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/images/homebg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 40px 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin: 0 0 20px 0;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.5em;
+            margin: 0 0 30px 0;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+        
+        .hero-content .description {
+            font-size: 1.2em;
+            margin: 0 0 40px 0;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+        
+        .hero-image {
+            margin-bottom: 30px;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .nav {
+            background-color: #34495e;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+        
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #3498db;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2c3e50;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #34495e;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .dropdown-menu li:last-child a {
+            border-bottom: none;
+        }
+        
+        .content-section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .content-section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .content-section p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1.1em;
+        }
+        
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .overview-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+        
+        .overview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .overview-card h3 {
+            color: #2c3e50;
+            margin: 0 0 15px 0;
+            font-size: 1.3em;
+        }
+        
+        .overview-card p {
+            margin: 0;
+            font-size: 1em;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .contact-section h2 {
+            color: white;
+            border: none;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .contact-info strong {
+            color: #ecf0f1;
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .footer p {
+            margin: 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            margin: 10px;
+        }
+        
+        .cta-button:hover {
+            background: #2980b9;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .hero-content .description {
+                font-size: 1em;
+            }
+            
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav li {
+                display: block;
+                margin: 5px 0;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background-color: #34495e;
+                margin-top: 5px;
+                border-radius: 5px;
+            }
+            
+            .dropdown-menu li {
+                margin: 0;
+            }
+            
+            .dropdown-menu a {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+            
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="assets/images/sadam.jpg" alt="Abdul Gaffar Haadi" class="profile-image">
+            </div>
+            <h1>Union Street Center: An Environmental Observation Assessment</h1>
+            <p class="subtitle">Abdul Gaffar Haadi</p>
+            <p class="description">Exploring the intersection of physical space, organizational culture, and student development in residential life</p>
+            <a href="#overview" class="cta-button">Explore Assessment</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="physical-environment.html">Physical Environment</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="layout-function.html">Layout & Function</a></li>
+                        <li><a href="impact-of-physical-space.html">Impact of Space</a></li>
+                    </ul>
+                </li>
+                <li><a href="structural-environment.html">Structural Environment</a></li>
+                <li><a href="cece-indicators.html">CECE Indicators</a></li>
+                <li><a href="person-environment.html">Person-Environment</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content-section" id="overview">
+            <h2>Welcome to My Environmental Assessment</h2>
+            
+            <p>Hello, and Welcome to my Environmental Observation Assessment of the Residence Life Department at Union Street Center, presented through the perspective of my role as an Assistant Coordinator for Center Management.</p>
+            
+            <p>This project explores how environmental factors - both physical and organizational - shape the culture, operations, and engagement within the department. It also reflects on how my position contributes to creating living-learning environments at Union Street Center that support holistic student development, academic success, and civic engagement.</p>
+            
+            <p>Use the navigation menu to learn more about Union Street Center – Residence Life, my professional role, and the observations and analyses that inform this assessment.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>Assessment Overview</h2>
+            
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <h3>Physical Environment</h3>
+                    <p>An analysis of the physical spaces within Union Street Center, examining how architectural design and spatial organization impact student life and community development.</p>
+                </div>
+                
+                <div class="overview-card">
+                    <h3>Layout & Function</h3>
+                    <p>Exploring the functional design of key spaces including the Center Desk, office areas, lounge spaces, library, and market, and their role in daily operations.</p>
+                </div>
+                
+                <div class="overview-card">
+                    <h3>Impact of Physical Space</h3>
+                    <p>Understanding how the physical environment influences student behavior, social interaction, and academic engagement within the residential community.</p>
+                </div>
+                
+                <div class="overview-card">
+                    <h3>Structural Environment</h3>
+                    <p>Examining the organizational structure, policies, and administrative systems that shape the residential life experience at Union Street Center.</p>
+                </div>
+                
+                <div class="overview-card">
+                    <h3>CECE Indicators</h3>
+                    <p>Analyzing Cultural Engagement, Community Engagement, and Educational indicators that demonstrate the effectiveness of the residential environment.</p>
+                </div>
+                
+                <div class="overview-card">
+                    <h3>Person-Environment Interaction</h3>
+                    <p>Investigating how individual students interact with and are influenced by the physical and social environment of Union Street Center.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <h2>Questions? Learn More!</h2>
+            <div class="contact-info">
+                <p><strong>Union Street Center</strong><br>
+                445 N Union Street<br>
+                Bloomington, IN 47406<br><br>
+                <strong>ahaadi@iu.edu</strong></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 by Abdul Gaffar Haadi | Union Street Center Environmental Assessment</p>
+    </footer>
+</body>
+</html>

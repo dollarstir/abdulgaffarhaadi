@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout & Function - Union Street Center Environmental Assessment</title>
+    <meta property="og:title" content="Layout & Function"/>
+    <meta property="og:url" content="layout-function.html"/>
+    <meta property="og:site_name" content="Abdul Gaffar Haadi: Environmental Assessment"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Layout & Function"/>
+    
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .nav {
+            background-color: #34495e;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+        
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #3498db;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2c3e50;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #34495e;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .dropdown-menu li:last-child a {
+            border-bottom: none;
+        }
+        
+        .content-section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .content-section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .content-section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-container img:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .footer p {
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero-content p {
+                font-size: 1em;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .nav li {
+                display: block;
+                margin: 5px 0;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background-color: #34495e;
+                margin-top: 5px;
+                border-radius: 5px;
+            }
+            
+            .dropdown-menu li {
+                margin: 0;
+            }
+            
+            .dropdown-menu a {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Layout & Function</h1>
+            <p>Union Street Center Environmental Assessment</p>
+        </div>
+        
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="physical-environment.html">Physical Environment</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="layout-function.html">Layout & Function</a></li>
+                        <li><a href="impact-of-physical-space.html">Impact of Space</a></li>
+                    </ul>
+                </li>
+                <li><a href="structural-environment.html">Structural Environment</a></li>
+                <li><a href="cece-indicators.html">CECE Indicators</a></li>
+                <li><a href="person-environment.html">Person-Environment</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content-section">
+            <h2>Physical Layout & Function</h2>
+            <p>Union Street Center (USC) at Indiana University Bloomington is one of the 19 residential communities managed by the Office of Residence Life and Housing. Designed as apartment-style housing, it offers students semi-independent living while maintaining access to essential support structures that foster belonging, development, and community engagement. Within this complex, several interconnected spaces - the Center Desk, Office Spaces behind the Center Desk, Lounge Area, Union Street Library, and Union Street Market - collectively form the physical environment that supports the daily operations and developmental goals of the residence community.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>Center Desk</h2>
+            
+            <div class="image-container">
+                <img src="assets/images/layout/centerdesk.jpg" alt="Center Desk at Union Street Center">
+                <div class="image-caption">The Center Desk serves as the operational and social hub of Union Street Center</div>
+            </div>
+            
+            <p>The Center Desk serves as the operational and social hub of Union Street Center. Located on the ground floor of Cedar Hall, it functions as the first point of contact for residents and visitors. The design of the desk promotes accessibility and efficiency, featuring an open counter area that allows for direct communication between residents and student staff.</p>
+            
+            <p>Desk assistants manage key checkouts, mail distribution, lockouts, and general inquiries, ensuring that daily residential needs are met in a timely and organized manner. The lively and interactive nature of the desk fosters communication, teamwork, and multitasking skills among student employees. However, due to its openness and high traffic, it can be challenging to hold private or extended conversations with residents. The Center Desk exemplifies what Strange and Banning (2015) describe as an interactive and functional physical environment - one that invites engagement and strengthens community connectedness.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>Office Spaces Behind the Center Desk</h2>
+            
+            <div class="image-container">
+                <img src="assets/images/layout/officespace.jpg" alt="Office spaces behind the Center Desk">
+                <div class="image-caption">Administrative and developmental offices located behind the Center Desk</div>
+            </div>
+            
+            <p>Behind the Center Desk lies a network of offices critical to the administrative and developmental functions of Union Street Center. These spaces include the Residence Life Coordinator for Student Development (RLC-SD) Office, the Assistant Coordinators for Center Management Office, the Residence Life Coordinator for Operations (RLC-O) Office, and the Resident Assistant (RA) Resource Room. The area also contains a mail hub for resident packages and a small kitchenette for employee use.</p>
+            
+            <p>The RLC-SD oversees community development initiatives and supervises the two graduate assistants, who in turn manage student care, conduct cases, and the supervision of 20 Resident Assistants. The RLC-O oversees operational processes, supervises the Center Desk Assistants, and works closely with the Emergency Operations staff. Both coordinators collaborate to ensure that the residential environment is safe, well-maintained, and student-centered.</p>
+            
+            <p>The graduate assistants share an office located directly behind the Center Desk, each equipped with dual monitors, webcams, and a small couch used for meetings. Due to the open ceiling structure, confidentiality can be difficult to maintain, leading to the use of conference rooms such as the Eigenmann Hall Conference room or second-floor Conference meeting room for sensitive conversations. The RA Resource Room supports programming needs by providing materials for bulletin boards, community events, and staff initiatives.</p>
+            
+            <p>The proximity of these offices encourages collaboration between professional, graduate, and student staff - an arrangement that aligns with Strange and Banning's (2015) perspective that effective environments promote interaction, structure, and mutual learning among their members.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>Lounge Area</h2>
+            
+            <div class="image-container">
+                <img src="assets/images/layout/loungearea.jpg" alt="Cedar Hall Lounge Area">
+                <div class="image-caption">The welcoming Cedar Hall Lounge Area fosters both socialization and study</div>
+            </div>
+            
+            <p>The Cedar Hall Lounge Area, located directly opposite the Center Desk, is a welcoming space that fosters both socialization and study. Furnished with couches, tables, and chairs in a variety of configurations, it accommodates group collaboration as well as individual reflection. Cedar Hall's glass-heavy architecture ensures that the space receives abundant natural light throughout the day, contributing to an atmosphere of openness and warmth.</p>
+            
+            <p>The lounge is used not only by Union Street residents but also by other IU students throughout the day, serving as a communal bridge between residential and academic life. After 10 p.m., access is limited to residents of the upper floors. I personally use this space often, as it facilitates informal connections with students and encourages organic relationship building. According to Strange and Banning (2015), such human aggregate components are essential in environments designed to nurture belonging and engagement.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>Union Street Library</h2>
+            
+            <div class="image-container">
+                <img src="assets/images/layout/unionstreetlibrary.jpg" alt="Union Street Library">
+                <div class="image-caption">The quiet Union Street Library offers books and board games for student use</div>
+            </div>
+            
+            <p>Located between the lounge and the Union Street Market, the Union Street Library is a quiet space offering books and board games for student use. While underutilized, it provides an atmosphere conducive to reflection, creativity, and relaxation. I frequently visit the library to borrow board games or reading materials for both programming and personal enrichment.</p>
+            
+            <p>Currently, the space lacks visibility and regular use, but efforts are underway to raise awareness and integrate it into community programming. As Strange and Banning (2015) highlight, intentional and purposeful space design can significantly enhance learning and engagement - making the library a promising site for future development and outreach.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>Union Street Market</h2>
+            
+            <div class="image-container">
+                <img src="assets/images/layout/unionstreetmarket.jpg" alt="Union Street Market">
+                <div class="image-caption">The Union Street Market provides dining and convenience options for students and staff</div>
+            </div>
+            
+            <p>The Union Street Market provides dining and convenience options for students and staff from 8:00 a.m. to 9:00 p.m. daily. It offers a range of meals including sandwiches, pizza, and snacks, along with basic groceries and beverages. Students are able to use meal exchanges and meal combos as part of their dining plans.</p>
+            
+            <p>Given the distance between Union Street Center and the main dining halls, the Market plays a critical role in supporting the daily lives of residents and employees. It also functions as an informal gathering space where community members cross paths throughout the day. Personally, I rely on the Market for meals during work hours, appreciating both its accessibility and its convenience. Beyond its practical purpose, the Market contributes to the community's rhythm, embodying what Strange and Banning (2015) describe as the integration of function and social interaction within a campus environment.</p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 by Abdul Gaffar Haadi | Union Street Center Environmental Assessment</p>
+    </footer>
+</body>
+</html>

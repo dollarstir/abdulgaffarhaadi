@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Union Street Center Environmental Assessment</title>
+  <meta property="og:title" content="About"/>
+    <meta property="og:url" content="about.html"/>
+    <meta property="og:site_name" content="Abdul Gaffar Haadi: Environmental Assessment"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="About"/>
+    
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/images/about/aboutbg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 40px 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3em;
+            margin: 0 0 20px 0;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.3em;
+            margin: 0;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .nav {
+            background-color: #34495e;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+        
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #3498db;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2c3e50;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #34495e;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .dropdown-menu li:last-child a {
+            border-bottom: none;
+        }
+        
+        .content-section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .content-section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .content-section h3 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .content-section p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1.1em;
+        }
+        
+        .content-section ul {
+            margin-bottom: 15px;
+        }
+        
+        .content-section li {
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-container img:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        
+        .role-section {
+            background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .role-section h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        
+        .mission-quote {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .footer p {
+            margin: 0;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .nav li {
+                display: block;
+                margin: 5px 0;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background-color: #34495e;
+                margin-top: 5px;
+                border-radius: 5px;
+            }
+            
+            .dropdown-menu li {
+                margin: 0;
+            }
+            
+            .dropdown-menu a {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>About Union Street Center</h1>
+            <p class="subtitle">Environmental Assessment by Abdul Gaffar Haadi</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="physical-environment.html">Physical Environment</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="layout-function.html">Layout & Function</a></li>
+                        <li><a href="impact-of-physical-space.html">Impact of Space</a></li>
+                    </ul>
+                </li>
+                <li><a href="structural-environment.html">Structural Environment</a></li>
+                <li><a href="cece-indicators.html">CECE Indicators</a></li>
+                <li><a href="person-environment.html">Person-Environment</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content-section">
+            <h2>Union Street Center (USC)</h2>
+            
+            <p>Union Street Center (USC) is one of the nineteen residence halls at Indiana University Bloomington and is part of the Residence Life and Housing Operations within the Office of Student Life. Known for its apartment-style living, USC offers a unique residential experience that combines the independence of apartment living with the support and community engagement of on-campus housing.</p>
+            
+            <p>USC is composed of seven halls - Cedar, Birch, Hickory, Linden, Pine, Cypress, and Beech - each providing fully furnished apartments that include kitchens, living areas, and in-unit laundry facilities. Cedar Hall serves as the central hub of the complex, housing administrative offices, classrooms Union Street Library, and the Union Street Market, where students gather to eat, study, and socialize.</p>
+            
+            <div class="mission-quote">
+                <p><strong>Mission Statement:</strong> The mission of IU's Residential Programs and Services is to "provide clean, safe, and inclusive housing environments that support the academic success and personal development of all students" (IU Housing: Indiana University Bloomington, n.d.). Union Street Center embodies this mission by fostering a living-learning environment that balances comfort, accessibility, and community.</p>
+            </div>
+            
+            <p>Learn more about Union Street Center here: <a href="https://housing.indiana.edu/residence-centers/union-street.html" target="_blank" style="color: #3498db;">Union Street: Residence Centers: IU Housing: Indiana University Bloomington</a>.</p>
+        </div>
+        
+        <div class="content-section">
+            <div class="two-column">
+                <div>
+                    <h2>Assistant Coordinator for Center Management</h2>
+                    <h3>Roles and Responsibilities</h3>
+                    
+                    <p>As the Assistant Coordinator for Center Management at Union Street Center (USC), I am in a shared office behind the Cedar Hall Center Desk, alongside a fellow graduate student who also holds the same position. My position falls under the broader residential life operations of the Office of Residence Life and Housing, within the Division of Student Affairs at Indiana University Bloomington.</p>
+                    
+                    <p>In this role, my primary goal is to support students' personal and professional development by fostering leadership, community engagement, and holistic well-being within the residence hall environment. This is accomplished through a combination of direct supervision, program coordination, and student-focused initiatives, including:</p>
+                    
+                    <ul>
+                        <li>Supervising and mentoring a team of Resident Assistants (RAs), ensuring policies are followed and residents' needs are met.</li>
+                        <li>Supporting day-to-day residential operations and collaborating with campus partners to address student care and wellness cases.</li>
+                        <li>Designing and facilitating training sessions at the beginning of each academic semester for staff and student leaders.</li>
+                        <li>Leading weekly team meetings to provide ongoing support, guidance, and professional development opportunities.</li>
+                        <li>Creating programs that promote community, inclusivity, and student engagement across USC.</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <p><strong>Impact:</strong> Through these responsibilities, my role emphasizes both operational efficiency and student-centered leadership development, helping to create a supportive and engaging living-learning environment.</p>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="assets/images/about/roleimage.jpg" alt="Abdul Gaffar Haadi - Assistant Coordinator for Center Management">
+                    <div class="image-caption">Abdul Gaffar Haadi<br>Assistant Coordinator for Center Management</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>Environmental Assessment Focus</h2>
+            
+            <p>This environmental assessment examines Union Street Center through multiple lenses, exploring how the physical environment, organizational structure, and community dynamics intersect to create meaningful residential experiences. As an Assistant Coordinator, I have unique insight into both the operational aspects of residential life and the student experience, allowing for a comprehensive analysis of the environment's impact on student development.</p>
+            
+            <p>The assessment considers various environmental factors including spatial design, community programming, staff-student interactions, and the integration of academic and residential life. Through this analysis, we can better understand how to optimize residential environments to support student success and well-being.</p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 by Abdul Gaffar Haadi | Union Street Center Environmental Assessment</p>
+    </footer>
+</body>
+</html>

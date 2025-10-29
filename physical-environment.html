@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Environment - Union Street Center Environmental Assessment</title>
+    <meta property="og:title" content="Physical Environment"/>
+    <meta property="og:url" content="physical-environment.html"/>
+    <meta property="og:site_name" content="Abdul Gaffar Haadi: Environmental Assessment"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Physical Environment"/>
+    
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-size: 3em;
+            margin: 0 0 20px 0;
+            font-weight: 300;
+        }
+        
+        .hero-content p {
+            font-size: 1.2em;
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .nav {
+            background-color: #34495e;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+        
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #3498db;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2c3e50;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #34495e;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .dropdown-menu li:last-child a {
+            border-bottom: none;
+        }
+        
+        .content-section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .content-section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .content-section p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1.1em;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .overview-item {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .overview-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .overview-item h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .overview-item p {
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(135deg, #2980b9, #1f5f8b);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .footer p {
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero-content p {
+                font-size: 1em;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .nav li {
+                display: block;
+                margin: 5px 0;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background-color: #34495e;
+                margin-top: 5px;
+                border-radius: 5px;
+            }
+            
+            .dropdown-menu li {
+                margin: 0;
+            }
+            
+            .dropdown-menu a {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+            
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .overview-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Physical Environment</h1>
+            <p>Overview of physical spaces and their impact at Union Street Center</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="physical-environment.html">Physical Environment</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="layout-function.html">Layout & Function</a></li>
+                        <li><a href="impact-of-physical-space.html">Impact of Space</a></li>
+                    </ul>
+                </li>
+                <li><a href="structural-environment.html">Structural Environment</a></li>
+                <li><a href="cece-indicators.html">CECE Indicators</a></li>
+                <li><a href="person-environment.html">Person-Environment</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content-section">
+            <h2>Physical Environment of USC</h2>
+            <p class="subtitle">Explore how I experience my physical Environment</p>
+            
+            <p>For the scope of this assessment, my environmental observations are grounded in my role as the Assistant Coordinator for Center Management within Union Street Center (USC). My office is located behind the Cedar Hall Center Desk, alongside my graduate assistant colleague, while other staff - such as the Residence Life Coordinators for Student Development and Operations - occupy adjoining offices within the same suite. In addition to this core workspace, I frequently navigate other physical spaces within USC, including the Lounge Area, Union Street Library, and Union Street Market, each serving unique operational and community functions. My focus throughout this assessment is on how the physical design and spatial organization of these areas shape workflow, collaboration, and engagement among professional, graduate, and student staff. Furthermore, I will examine how the structural layout of USC - within the broader Residence Life and Housing framework - affects accessibility, communication, and the collective functioning of the department as a residential learning environment.</p>
+            
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <h3>Physical Layout & Function</h3>
+                    <p>Detailed analysis of USC's physical spaces including the Center Desk, office areas, lounge spaces, library, and market facilities.</p>
+                    <a href="layout-function.html" class="cta-button">Explore Layout & Function</a>
+                </div>
+                
+                <div class="overview-item">
+                    <h3>Impact of Physical Space</h3>
+                    <p>Examination of how physical environment affects collaboration, communication, and departmental cohesion at USC.</p>
+                    <a href="impact-of-physical-space.html" class="cta-button">Explore Impact Analysis</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 by Abdul Gaffar Haadi | Union Street Center Environmental Assessment</p>
+    </footer>
+</body>
+</html>

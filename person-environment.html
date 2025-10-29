@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person-Environment Interaction - Union Street Center Environmental Assessment</title>
+    <meta property="og:title" content="Person-Environment Interaction"/>
+    <meta property="og:url" content="person-environment.html"/>
+    <meta property="og:site_name" content="Abdul Gaffar Haadi: Environmental Assessment"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Person-Environment Interaction"/>
+    
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-size: 3em;
+            margin: 0 0 20px 0;
+            font-weight: 300;
+        }
+        
+        .hero-content p {
+            font-size: 1.2em;
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .nav {
+            background-color: #34495e;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+        
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #3498db;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2c3e50;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #34495e;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .dropdown-menu li:last-child a {
+            border-bottom: none;
+        }
+        
+        .content-section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .content-section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .content-section h3 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .content-section p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1.1em;
+        }
+        
+        .content-section ul {
+            margin-bottom: 15px;
+        }
+        
+        .content-section li {
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .intro-text {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .intro-text p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+        
+        .analysis-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .analysis-section h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .challenge-section {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            padding: 20px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .challenge-section h4 {
+            color: #856404;
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
+        
+        .challenge-section p {
+            margin: 0;
+            color: #856404;
+        }
+        
+        .highlight {
+            background-color: #d4edda;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight p {
+            margin: 0;
+            color: #155724;
+        }
+        
+        .framework-box {
+            background: linear-gradient(135deg, #e8f4fd, #d1ecf1);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid #17a2b8;
+        }
+        
+        .framework-box h4 {
+            color: #0c5460;
+            margin: 0 0 15px 0;
+            font-size: 1.3em;
+        }
+        
+        .framework-box p {
+            margin: 0;
+            color: #0c5460;
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .footer p {
+            margin: 0;
+        }
+        
+        .quote {
+            font-style: italic;
+            color: #666;
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 3px solid #3498db;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero-content p {
+                font-size: 1em;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .nav li {
+                display: block;
+                margin: 5px 0;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background-color: #34495e;
+                margin-top: 5px;
+                border-radius: 5px;
+            }
+            
+            .dropdown-menu li {
+                margin: 0;
+            }
+            
+            .dropdown-menu a {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Person–Environment Interaction Analysis</h1>
+            <p>Understanding the dynamic relationship between individual and environment at Union Street Center</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="physical-environment.html">Physical Environment</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="layout-function.html">Layout & Function</a></li>
+                        <li><a href="impact-of-physical-space.html">Impact of Space</a></li>
+                    </ul>
+                </li>
+                <li><a href="structural-environment.html">Structural Environment</a></li>
+                <li><a href="cece-indicators.html">CECE Indicators</a></li>
+                <li><a href="person-environment.html">Person-Environment</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content-section">
+            <div class="intro-text">
+                <p>Between the physical, structural/organizational, and cultural environment of Union Street Center (USC), each element shapes my attraction, satisfaction, and stability within this residential setting. According to Strange and Banning (2015), person–environment fit occurs when individuals experience congruence between their personal characteristics and the dominant environmental type (p. 73). USC presents a complex interplay of alignment and challenges: its structured hierarchy, apartment-style housing, and emphasis on student engagement foster a supportive yet dynamic environment that requires adaptability, creativity, and attention to diverse student needs.</p>
+            </div>
+            
+            <h2>Attraction</h2>
+            
+            <p>I was drawn to USC because of its commitment to residential student development, holistic care, and community engagement. The center's focus on fostering student leadership, connecting residents to campus resources, and creating inclusive programming aligns closely with my professional values and goals. In my role as Assistant Coordinator for Center Management, I oversee and mentor a team of 20 Resident Assistants which allows me to influence the student experience directly.</p>
+            
+            <div class="framework-box">
+                <h4>SALT Model Application</h4>
+                <p>Through the lens of Museus et al.'s (2017) Social Action, Leadership, and Transformation (SALT) model, my role supports students in navigating power, privilege, and identity within their residential communities. For instance, programs such as neighborhood block parties, line dancing, and cultural events create opportunities for students to recognize their agency, engage with diverse peers, and explore social dynamics in a collaborative setting. These initiatives validate students' identities while emphasizing their capacity to effect positive change in their communities, reflecting a culturally engaging environment (Museus, 2013).</p>
+            </div>
+            
+            <h2>Satisfaction</h2>
+            
+            <p>My satisfaction within USC arises from the relationships I cultivate with both professional staff and residents. Leadership team meetings - including bi-weekly check-ins with RAs, collaboration with the RLC for Operations, and engagement with the Assistant Director for Apartment Housing - enable shared decision-making, mentorship, and support. These practices align with the CECE principle of a humanized educational environment, where staff recognize students as whole individuals with unique strengths and challenges (Museus, 2013).</p>
+            
+            <div class="challenge-section">
+                <h4>Engagement Challenges</h4>
+                <p>However, the apartment-style structure presents challenges to engagement. Students often live independently in private apartments, limiting attendance at events despite innovative programming. While resources, space reservations, and communication platforms like Microsoft Teams support program delivery, engaging approximately 800 residents effectively remains an ongoing challenge. Even so, the environment encourages responsive and adaptive strategies, highlighting USC's dedication to cultural validation by ensuring programming reflects student interests, identities, and experiences.</p>
+            </div>
+            
+            <h2>Stability</h2>
+            
+            <p>I experience stability within USC due to the clearly defined organizational hierarchy and supportive professional culture. The chain of supervision - Resident Assistants reporting to graduate assistants, graduate assistants reporting to the RLC for Student Development, who reports to the Assistant Director for Apartment Housing - ensures accountability, guidance, and clarity in role expectations. The RLC for Student Development collaborates closely with the RLC for Operations to provide resources, space, and oversight for programming, further reinforcing stability.</p>
+            
+            <div class="challenge-section">
+                <h4>Structural Challenges</h4>
+                <p>Despite these structural supports, apartment-style housing and the dispersed physical layout can create gaps in real-time feedback and interaction with residents. These challenges require adaptability but also foster innovative approaches to community-building, leadership development, and resident engagement. By applying SALT principles, I am able to mentor students in recognizing their leadership potential while navigating systemic and interpersonal dynamics within the residential environment.</p>
+            </div>
+            
+            <h2>Reflection</h2>
+            
+            <div class="analysis-section">
+                <h3>Overall Assessment</h3>
+                <p>Overall, USC demonstrates a supportive, culturally responsive, and student-centered environment aligned with the CECE principles of cultural validation, humanized care, and collectivist engagement (Museus, 2013). My attraction to this environment stems from its focus on relationship-building, student development, and holistic care. Satisfaction emerges from meaningful mentorship and collaborative programming, while stability is reinforced through clear structure, accessible leadership, and professional support.</p>
+                
+                <div class="highlight">
+                    <p><strong>Professional Growth:</strong> At the same time, the challenges inherent to apartment-style housing, dispersed spaces, and engagement with upperclassmen residents have honed my skills in flexibility, problem-solving, and innovation. By intentionally applying SALT model frameworks to mentoring and programming, I am able to create culturally validating, socially conscious, and transformative experiences for residents.</p>
+                </div>
+                
+                <p>USC has provided a rich context for understanding person–environment fit, demonstrating how a supportive, structured, and culturally engaged environment can enhance both student and professional growth.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 by Abdul Gaffar Haadi | Union Street Center Environmental Assessment</p>
+    </footer>
+</body>
+</html>

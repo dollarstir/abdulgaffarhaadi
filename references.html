@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References - Union Street Center Environmental Assessment</title>
+    <meta property="og:title" content="References"/>
+    <meta property="og:url" content="references.html"/>
+    <meta property="og:site_name" content="Abdul Gaffar Haadi: Environmental Assessment"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="References"/>
+    
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        /* Debug styles to ensure visibility */
+        * {
+            box-sizing: border-box;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-size: 3em;
+            margin: 0 0 20px 0;
+            font-weight: 300;
+        }
+        
+        .hero-content p {
+            font-size: 1.2em;
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .nav {
+            background-color: #34495e;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+        
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #3498db;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2c3e50;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #34495e;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .dropdown-menu li:last-child a {
+            border-bottom: none;
+        }
+        
+        .content-section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .content-section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        
+        .references-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .references-list li {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .references-list li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .reference-text {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        .reference-link {
+            color: #3498db;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        
+        .reference-link:hover {
+            text-decoration: underline;
+        }
+        
+        .reference-category {
+            background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .reference-category h3 {
+            color: #2c3e50;
+            margin: 0 0 15px 0;
+            font-size: 1.3em;
+        }
+        
+        .academic-sources {
+            background: linear-gradient(135deg, #e8f4fd, #d1ecf1);
+            border-left: 4px solid #3498db;
+        }
+        
+        .institutional-sources {
+            background: linear-gradient(135deg, #f0f8e8, #e8f5e8);
+            border-left: 4px solid #27ae60;
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .footer p {
+            margin: 0;
+        }
+        
+        .intro-text {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .intro-text p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero-content p {
+                font-size: 1em;
+            }
+            
+            .references-list li {
+                padding: 15px;
+            }
+            
+            .reference-text {
+                font-size: 1em;
+            }
+            
+            .nav li {
+                display: block;
+                margin: 5px 0;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background-color: #34495e;
+                margin-top: 5px;
+                border-radius: 5px;
+            }
+            
+            .dropdown-menu li {
+                margin: 0;
+            }
+            
+            .dropdown-menu a {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>References</h1>
+            <p>Academic and Institutional Sources</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="physical-environment.html">Physical Environment</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="layout-function.html">Layout & Function</a></li>
+                        <li><a href="impact-of-physical-space.html">Impact of Space</a></li>
+                    </ul>
+                </li>
+                <li><a href="structural-environment.html">Structural Environment</a></li>
+                <li><a href="cece-indicators.html">CECE Indicators</a></li>
+                <li><a href="person-environment.html">Person-Environment</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content-section">
+            <div class="intro-text">
+                <p>This environmental assessment draws upon a combination of academic literature, institutional resources, and practical experience to provide a comprehensive analysis of Union Street Center's residential environment and its impact on student development.</p>
+            </div>
+            
+            <h2>Academic Sources</h2>
+            
+            <div class="reference-category academic-sources">
+                <h3>Environmental Design and Student Development</h3>
+                <ul class="references-list">
+                    <li>
+                        <p class="reference-text">
+                            Strange, C. C., & Banning, J. H. (2015). <em>Designing for learning: Creating campus environments for student success</em> (2nd ed.). Jossey-Bass.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="reference-category academic-sources">
+                <h3>Culturally Engaging Campus Environments</h3>
+                <ul class="references-list">
+                    <li>
+                        <p class="reference-text">
+                            Museus, S. D. (2013). The culturally engaging campus environments (CECE) model: A new theory of success among racially diverse college student populations. In M. B. Paulsen (Ed.), <em>Higher education: Handbook of theory and research</em> (Vol. 29, pp. 189–227). Springer.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="reference-text">
+                            Museus, S. D., Palmer, R. T., Davis, R. J., & Maramba, D. C. (2017). The Social Action, Leadership, and Transformation (SALT) model: Culturally engaging frameworks in student leadership development. <em>Journal of College Student Development</em>, 58(7), 1035–1051.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+            <h2>Institutional Sources</h2>
+            
+            <div class="reference-category institutional-sources">
+                <h3>Indiana University Bloomington Resources</h3>
+                <ul class="references-list">
+                    <li>
+                        <p class="reference-text">
+                            Indiana University Bloomington. (n.d.). About the Division of Student Affairs. <a href="https://studentaffairs.indiana.edu/" class="reference-link" target="_blank">https://studentaffairs.indiana.edu/</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="reference-text">
+                            Indiana University Bloomington. (n.d.). Resident Assistant training and resources. Indiana University Housing. <a href="https://reslife.indiana.edu/training/ra-resources" class="reference-link" target="_blank">https://reslife.indiana.edu/training/ra-resources</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="reference-text">
+                            Indiana University Bloomington. (n.d.). Union Street Center programming guide. Indiana University Housing. <a href="https://reslife.indiana.edu/programming" class="reference-link" target="_blank">https://reslife.indiana.edu/programming</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="reference-text">
+                            Indiana University Bloomington. (n.d.). Union Street Center residence halls. Indiana University Housing. <a href="https://reslife.indiana.edu/halls/union-street-center" class="reference-link" target="_blank">https://reslife.indiana.edu/halls/union-street-center</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="content-section" style="background: #f8f9fa; margin-top: 30px;">
+                <h2>Methodology Note</h2>
+                <p>This environmental assessment combines theoretical frameworks from higher education research with practical observations and institutional data to provide a comprehensive analysis of Union Street Center's residential environment. The assessment employs both qualitative and quantitative approaches to understand how physical and organizational factors influence student development and community engagement.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 by Abdul Gaffar Haadi | Union Street Center Environmental Assessment</p>
+    </footer>
+</body>
+</html>
